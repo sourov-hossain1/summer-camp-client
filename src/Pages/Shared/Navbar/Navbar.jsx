@@ -32,7 +32,7 @@ const Navbar = () => {
                 </div>
                 <div className="w-[90px] h-[60px] flex">
                     <img src="https://t4.ftcdn.net/jpg/01/92/97/85/360_F_192978595_AOzpIW423K5kdlTWuqJXoyLN0z0FXixY.jpg" alt="" />
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">Sports</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
