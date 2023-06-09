@@ -5,7 +5,7 @@ const Popular = () => {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
-    fetch('popular.json')
+    fetch('http://localhost:5000/popular')
       .then(res => res.json())
       .then(data => {
         const TopStudents = data.filter(number => number.students > 25);
