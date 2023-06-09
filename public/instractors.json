@@ -1,0 +1,44 @@
+[
+    {
+        "_id": 1,
+        "name": "John Smith",
+        "image": "john_smith.jpg",
+        "class": "Mathematics",
+        "student": 30
+    },
+    {
+        "_id": 2,
+        "name": "Emma Johnson",
+        "image": "emma_johnson.jpg",
+        "class": "English Literature",
+        "student": 25
+    },
+    {
+        "_id": 3,
+        "name": "Michael Brown",
+        "image": "michael_brown.jpg",
+        "class": "Physics",
+        "student": 20
+    },
+    {
+        "_id": 4,
+        "name": "Sarah Davis",
+        "image": "sarah_davis.jpg",
+        "class": "Chemistry",
+        "student": 15
+    },
+    {
+        "_id": 5,
+        "name": "David Wilson",
+        "image": "david_wilson.jpg",
+        "class": "Computer Science",
+        "student": 40
+    },
+    {
+        "_id": 6,
+        "name": "Jennifer Lee",
+        "image": "jennifer_lee.jpg",
+        "class": "History",
+        "student": 35
+    }
+]
