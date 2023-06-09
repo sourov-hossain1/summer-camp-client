@@ -1,0 +1,7 @@
+.popular-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.popular-card img{
+    width: 100%;
+}
