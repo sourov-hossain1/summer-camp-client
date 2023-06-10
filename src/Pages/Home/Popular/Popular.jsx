@@ -21,6 +21,7 @@ const Popular = () => {
             <figure><img src={popularClass.image} alt="Shoes" /></figure>
             <div className="card-body">
               <h2 className="card-title">{popularClass.name}</h2>
+              <p className="font-bold">Class: {popularClass.class}</p>
               <p className="font-bold">Total Students: {popularClass.students}</p>
               <p>{popularClass.description}</p>
               <div className="card-actions justify-end">
