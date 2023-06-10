@@ -13,10 +13,10 @@ const Navbar = () => {
 
 
     const navOption = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/instractors'>Instructors</Link></li>
-        <li><Link>Classes</Link></li>
-        <li><Link>Dashboard</Link></li>
+        <li><Link to='/' className="font-bold">Home</Link></li>
+        <li><Link to='/instractors' className="font-bold">Instructors</Link></li>
+        <li><Link className="font-bold">Classes</Link></li>
+        <li><Link to='/dashboard/selectclass' className="font-bold">Dashboard</Link></li>
     </>
 
     return (
