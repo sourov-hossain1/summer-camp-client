@@ -8,6 +8,7 @@ import Dashboard from "../Layout/Dashboard";
 import SelectClass from "../Pages/Dashboard/SelectClass";
 import EnrolledClass from "../Pages/Dashboard/EnrolledClass";
 import Payment from "../Pages/Dashboard/Payment";
+import Classes from "../Pages/Classes/Classes";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: '/instractors',
                 element: <Instractor></Instractor>
+            },
+            {
+                path: '/classes',
+                element: <Classes></Classes>
             }
         ]
     },
