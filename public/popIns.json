@@ -4,63 +4,41 @@
         "name": "Rahim",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqVVENxnKVX1jkBiLYpI6HYxPBJdcSmYIT1g&usqp=CAU",
         "class": "Six",
-        "student": 40,
-        "email" : "rahim@gmail.com"
+        "student": 40
     },
     {
         "_id": 2,
         "name": "Karim",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0TRCwvihtIwv-2JQJhEYMSU8_PXxkait_g&usqp=CAU",
         "class": "Seven",
-        "student": 36,
-        "email" : "karim@gmail.com"
+        "student": 36
     },
     {
         "_id": 3,
         "name": "Michael Brown",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdyPwaNMfJ-g9Z0ul9XjDC8Fk4oaxRwDOr6A&usqp=CAU",
         "class": "Eight",
-        "student": 35,
-        "email" : "michael@gmail.com"
+        "student": 35
     },
     {
         "_id": 4,
         "name": "Sarah Davis",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-NwFRXIW2EktYdOMB8dvgMw6Y5B_IRQWS1w&usqp=CAU",
         "class": "Nine",
-        "student": 30,
-        "email" : "sarah@gmail.com"
+        "student": 30
     },
     {
         "_id": 5,
         "name": "David Wilson",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JTW0qTa0Dgedo7h5NVvUa9YTIZfRL8KjkA&usqp=CAU",
         "class": "Ten",
-        "student": 27,
-        "email" : "david@gmail.com"
+        "student": 27
     },
     {
         "_id": 6,
         "name": "Jennifer Lee",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjvKyGP-rBFipdp-Sr4LrsNcM2VWDHeWCrzQ&usqp=CAU",
         "class": "Five",
-        "student": 26,
-        "email" : "jennifer@gmail.com"
-    },
-    {
-        "_id": 7,
-        "name": "Fahim Lee",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-NwFRXIW2EktYdOMB8dvgMw6Y5B_IRQWS1w&usqp=CAU",
-        "class": "Eleven",
-        "student": 20,
-        "email" : "fafim@gmail.com"
-    },
-    {
-        "_id": 8,
-        "name": "Munna Lee",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqVVENxnKVX1jkBiLYpI6HYxPBJdcSmYIT1g&usqp=CAU",
-        "class": "Four",
-        "student": 23,
-        "email" : "munna@gmail.com"
+        "student": 26
     }
 ]
