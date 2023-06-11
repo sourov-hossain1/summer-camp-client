@@ -9,6 +9,7 @@ import SelectClass from "../Pages/Dashboard/SelectClass";
 import EnrolledClass from "../Pages/Dashboard/EnrolledClass";
 import Payment from "../Pages/Dashboard/Payment";
 import Classes from "../Pages/Classes/Classes";
+import Private from "./Private";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/instractors',
-                element: <Instractor></Instractor>
+                element: <Private><Instractor></Instractor></Private>
             },
             {
                 path: '/classes',

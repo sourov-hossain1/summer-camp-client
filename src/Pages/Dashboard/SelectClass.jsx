@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
+// import useCart from "../../Hooks/useCart";
+import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 
 const SelectClass = () => {
   const [carts, setCarts] = useState([]);
+  // const [, refetch] = useCart();
 
   useEffect(() => {
     fetch('http://localhost:5000/carts')
@@ -12,8 +16,37 @@ const SelectClass = () => {
       })
   }, [])
 
+  const handleDelete = item => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            fetch(`http://localhost:5000/carts/${item._id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        // refetch();
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        )
+                    }
+                })
+        }
+    })
+}
+
   return (
-    <div>
+    <div className="w-full">
       <h2 className="text-2xl text-center my-5">My selected class: {carts.length}</h2>
       <div className="overflow-x-auto">
         <table className="table">
@@ -53,7 +86,7 @@ const SelectClass = () => {
               </td>
               <td>$ {cart.price}</td>
               <td>
-                <button className="btn btn-ghost btn-xs">delete</button>
+                <button onClick={() => handleDelete(cart)} className="btn btn-ghost btn-xs">delete</button>
               </td>
               <td className="text-center">
                 <button className="btn btn-ghost btn-xs">Pay</button>
