@@ -14,7 +14,8 @@ const Popular = () => {
   }, [])
   return (
     <>
-      <h2 className="text-3xl text-center mt-6 mb-4">Popular Classes</h2>
+      <h2 className="text-3xl text-center mt-10 mb-2">Popular Classes</h2>
+      <p className="border-0 border-b-4 mb-5 w-1/4 mx-auto"></p>
       <div className="popular-card">
         {
           popular.map(popularClass => <div key={popularClass._id} className="card me-4 mb-4 w-80 bg-base-100 shadow-xl">

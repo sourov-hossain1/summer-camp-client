@@ -15,10 +15,11 @@ const PopIns = () => {
   return (
     <>
       <h2 className="text-3xl text-center my-5">Popular Instractors</h2>
+      <p className="border-0 border-b-4 mb-5 w-1/4 mx-auto"></p>
       <div className="popins-card">
         {
           instractors.map(instractor => <div key={instractor._id} className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={instractor.image} alt="Movie" /></figure>
+            <figure><img className="h-[200px] w-[300px]" src={instractor.image} alt="Movie" /></figure>
             <div className="card-body">
               <h2 className="card-title">{instractor.name}</h2>
               <p>Click the button to watch on Jetflix app.</p>

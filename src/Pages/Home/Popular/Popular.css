@@ -1,8 +1,16 @@
 .popular-card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
 }
 .popular-card img{
     width: 100%;
     height: 200px;
+}
+
+@media only screen and (max-width: 576px){
+    .popular-card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
