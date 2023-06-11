@@ -6,7 +6,7 @@ const Classes = () => {
     const [learns, setLearns] = useState([]);
     const [, refetch] = useCart(); 
     const handleAddToCart = item =>{
-        console.log(item);
+        // console.log(item);
         fetch('http://localhost:5000/carts', {
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ const Classes = () => {
                             <p>Available seats: {learn.seats}</p>
                             <p>Price: ${learn.price}</p>
                             <div className="card-actions justify-end">
-                                <button onClick={()=>handleAddToCart(learn)} className="btn btn-outline border-0 border-b-4 mt-2">Select</button>
+                                <button onClick={()=> handleAddToCart(learn)} className="btn btn-outline border-0 border-b-4 mt-2">Select</button>
                             </div>
                         </div>
                     </div>)
