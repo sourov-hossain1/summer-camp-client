@@ -20,18 +20,31 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(from, {replace: true});
+                navigate(from, { replace: true });
             })
     }
 
-    const handleGoogleSignIn = event =>{
+    const handleGoogleSignIn = event => {
         event.preventDefault();
 
         googleSignIn()
-        .then(result =>{
-            const googleUser = result.user;
-            console.log(googleUser);
-        })
+            .then(result => {
+                const googleUser = result.user;
+                console.log(googleUser);
+                const saveUser = {name: googleUser.displayName, email: googleUser.email}
+
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(() => {
+                        
+                    })
+            })
     }
 
     return (

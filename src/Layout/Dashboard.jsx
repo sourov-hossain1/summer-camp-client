@@ -1,6 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
+
+    // TODO: load data from the server
+    const isAdmin = true;
+
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -13,12 +17,20 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
                     {/* Sidebar content here */}
-                    <li><Link to='/dashboard/selectclass'>My Selected Classes</Link></li>
-                    <li><Link to='/dashboard/enrolledclass'>My Enrolled Classes</Link></li>
-                    <li><Link to='/dashboard/payment'>Payment</Link></li>
+                    {
+                        isAdmin ? <>
+                            <li><Link to='/dashboard/mclasses'>Manage Classes</Link></li>
+                            <li><Link to='/dashboard/musers'>Manage Users</Link></li>
+                        </> : <>
+                            <li><Link to='/dashboard/selectclass'>My Selected Classes</Link></li>
+                            <li><Link to='/dashboard/enrolledclass'>My Enrolled Classes</Link></li>
+                            <li><Link to='/dashboard/payment'>Payment</Link></li>
+                        </>
+                    }
                     <div className="divider"></div>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/instractors'>Instractors</Link></li>
+                    <li><Link to='/classes'>Classes</Link></li>
                 </ul>
             </div>
         </div>
