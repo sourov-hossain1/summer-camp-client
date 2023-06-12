@@ -1,18 +1,24 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import './Classes.css'
 import useCart from "../../Hooks/useCart";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 const Classes = () => {
     const [learns, setLearns] = useState([]);
     const [, refetch] = useCart(); 
+    const {user} = useContext(AuthContext);
+
+
     const handleAddToCart = item =>{
         // console.log(item);
+        const { _id,name, image, instructor, seats, price} = item;
+        const classItem = {classItemId: _id,name, instructor, image, price,seats, email: user.email}
         fetch('http://localhost:5000/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(item)
+            body: JSON.stringify(classItem)
             
         })
         .then(res => res.json())

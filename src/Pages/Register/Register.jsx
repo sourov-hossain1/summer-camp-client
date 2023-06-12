@@ -16,6 +16,20 @@ const Register = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            const saveUser = {name: data.name, email: data.email}
+
+            fetch('http://localhost:5000/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveUser)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+
         })
     };
 
