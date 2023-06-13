@@ -1,9 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
+// import useAdmin from "../Hooks/useAdmin";
 
 const Dashboard = () => {
 
     // TODO: load data from the server
-    const isAdmin = true;
+    const isAdmin = false;
+    // const [isAdmin] = useAdmin();
 
     return (
         <div className="drawer lg:drawer-open">
@@ -27,6 +29,12 @@ const Dashboard = () => {
                             <li><Link to='/dashboard/payment'>Payment</Link></li>
                         </>
                     }
+                    <div className="divider"></div>
+                    {/* ------------------------instructor dashboard--------------------------- */}
+                    <h2 className="text-lg">Instructor Dashboard</h2>
+                    <li><Link to='/dashboard/additem'>Add a Class</Link></li>
+                    <li><Link to='/dashboard/myclass'>My Classes</Link></li>
+
                     <div className="divider"></div>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/instractors'>Instractors</Link></li>

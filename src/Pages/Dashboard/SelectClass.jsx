@@ -1,20 +1,19 @@
-import { useEffect, useState } from "react";
-// import useCart from "../../Hooks/useCart";
+// import { useEffect, useState } from "react";
+import useCart from "../../Hooks/useCart";
 import Swal from "sweetalert2";
-// import Swal from "sweetalert2";
 
 
 const SelectClass = () => {
-  const [carts, setCarts] = useState([]);
-  // const [, refetch] = useCart();
+  // const [carts, setCarts] = useState([]);
+  const [cart, refetch] = useCart();
 
-  useEffect(() => {
-    fetch('http://localhost:5000/carts')
-      .then(res => res.json())
-      .then(data => {
-        setCarts(data)
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch('http://localhost:5000/carts')
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setCarts(data)
+  //     })
+  // }, [])
 
   const handleDelete = item => {
     Swal.fire({
@@ -33,7 +32,7 @@ const SelectClass = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        // refetch();
+                        refetch();
                         Swal.fire(
                             'Deleted!',
                             'Your file has been deleted.',
@@ -47,7 +46,7 @@ const SelectClass = () => {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl text-center my-5">My selected class: {carts.length}</h2>
+      <h2 className="text-2xl text-center my-5">My selected class: {cart.length}</h2>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
@@ -64,7 +63,7 @@ const SelectClass = () => {
             </tr>
           </thead>
           <tbody>
-            {carts.map((cart, index) =>  <tr key={cart._id}>
+            {cart.map((scart, index) =>  <tr key={scart._id}>
               <td>
                 {index + 1}
               </td>
@@ -72,21 +71,21 @@ const SelectClass = () => {
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
-                      <img src={cart.image} alt="Avatar Tailwind CSS Component" />
+                      <img src={scart.image} alt="Avatar Tailwind CSS Component" />
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold">{cart.name}</div>
-                    <div className="text-sm opacity-50">{cart.seats}</div>
+                    <div className="font-bold">{scart.name}</div>
+                    <div className="text-sm opacity-50">{scart.seats}</div>
                   </div>
                 </div>
               </td>
               <td>
-                {cart.seats}
+                {scart.seats}
               </td>
-              <td>$ {cart.price}</td>
+              <td>$ {scart.price}</td>
               <td>
-                <button onClick={() => handleDelete(cart)} className="btn btn-ghost btn-xs">delete</button>
+                <button onClick={() => handleDelete(scart)} className="btn btn-ghost btn-xs">delete</button>
               </td>
               <td className="text-center">
                 <button className="btn btn-ghost btn-xs">Pay</button>
