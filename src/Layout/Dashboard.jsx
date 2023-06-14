@@ -1,11 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
-// import useAdmin from "../Hooks/useAdmin";
+import useAdmin from "../Hooks/useAdmin";
 
 const Dashboard = () => {
 
     // TODO: load data from the server
-    const isAdmin = false;
-    // const [isAdmin] = useAdmin();
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="drawer lg:drawer-open">
