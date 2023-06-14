@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import useAdmin from "../Hooks/useAdmin";
+import { FaChalkboardTeacher, FaHome, FaBookMedical, FaUserSlash, FaMoneyCheck } from 'react-icons/fa';
 
 const Dashboard = () => {
 
@@ -16,28 +17,30 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-                    {/* Sidebar content here */}
+                <ul className="menu p-4 w-80 h-full bg-pink-200  text-base-content">
+                    {/* Sidebar content here bg-base-200*/}
                     {
                         isAdmin ? <>
-                            <li><Link to='/dashboard/mclasses'>Manage Classes</Link></li>
-                            <li><Link to='/dashboard/musers'>Manage Users</Link></li>
+                            <h2 className="text-lg">Admin Dashboard</h2>
+                            <li><Link to='/dashboard/mclasses'><FaBookMedical></FaBookMedical>Manage Classes</Link></li>
+                            <li><Link to='/dashboard/musers'><FaUserSlash></FaUserSlash> Manage Users</Link></li>
                         </> : <>
-                            <li><Link to='/dashboard/selectclass'>My Selected Classes</Link></li>
-                            <li><Link to='/dashboard/enrolledclass'>My Enrolled Classes</Link></li>
-                            <li><Link to='/dashboard/payment'>Payment</Link></li>
+                            <h2 className="text-lg">Students Dashboard</h2>
+                            <li><Link to='/dashboard/selectclass'><FaBookMedical></FaBookMedical>My Selected Classes</Link></li>
+                            <li><Link to='/dashboard/enrolledclass'><FaBookMedical></FaBookMedical>My Enrolled Classes</Link></li>
+                            <li><Link to='/dashboard/payment'><FaMoneyCheck></FaMoneyCheck> Payment</Link></li>
                         </>
                     }
                     <div className="divider"></div>
                     {/* ------------------------instructor dashboard--------------------------- */}
                     <h2 className="text-lg">Instructor Dashboard</h2>
-                    <li><Link to='/dashboard/additem'>Add a Class</Link></li>
-                    <li><Link to='/dashboard/myclass'>My Classes</Link></li>
+                    <li><Link to='/dashboard/additem'><FaBookMedical></FaBookMedical> Add a Class</Link></li>
+                    <li><Link to='/dashboard/myclass'><FaBookMedical></FaBookMedical> My Classes</Link></li>
 
                     <div className="divider"></div>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/instractors'>Instractors</Link></li>
-                    <li><Link to='/classes'>Classes</Link></li>
+                    <li><Link to='/'><FaHome></FaHome> Home</Link></li>
+                    <li><Link to='/instractors'><FaChalkboardTeacher></FaChalkboardTeacher> Instractors</Link></li>
+                    <li><Link to='/classes'><FaBookMedical></FaBookMedical> Classes</Link></li>
                 </ul>
             </div>
         </div>

@@ -5,7 +5,7 @@ const Instractor = () => {
     const [instractors, setInstractors] = useState([]);
 
   useEffect(() => {
-    fetch('instractors.json')
+    fetch('http://localhost:5000/instructor')
       .then(res => res.json())
       .then(data => {
         setInstractors(data)
@@ -13,10 +13,10 @@ const Instractor = () => {
   }, [])
   return (
     <>
-      <div className="ins-card">
+      <div className="ins-card mt-10">
         {
           instractors.map(instractor => <div key={instractor._id} className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={instractor.image} alt="Movie" /></figure>
+            <figure><img className="h-full" src={instractor.image} alt="Movie" /></figure>
             <div className="card-body">
               <h2 className="card-title">{instractor.name}</h2>
               <p>Email: {instractor.email}</p>

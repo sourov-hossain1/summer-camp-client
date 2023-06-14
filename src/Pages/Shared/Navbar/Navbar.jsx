@@ -27,7 +27,7 @@ const Navbar = () => {
         <li><Link to='/' className="font-bold">Home</Link></li>
         <li><Link to='/instractors' className="font-bold">Instructors</Link></li>
         <li><Link to='/classes' className="font-bold">Classes</Link></li>
-        <li><Link to='/dashboard/selectclass' className="font-bold">Dashboard</Link></li>
+        <li><Link to='/dashboard' className="font-bold">Dashboard</Link></li>
         <li><button className="font-bold" onClick={myFunction}>Dark mode</button>
         </li>
     </>

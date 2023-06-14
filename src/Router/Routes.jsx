@@ -9,7 +9,6 @@ import SelectClass from "../Pages/Dashboard/SelectClass";
 import EnrolledClass from "../Pages/Dashboard/EnrolledClass";
 import Payment from "../Pages/Dashboard/Payment";
 import Classes from "../Pages/Classes/Classes";
-import Private from "./Private";
 import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 import ManageClass from "../Pages/Dashboard/ManageUsers/ManageClass";
 import AddClass from "../Pages/Dashboard/Instructor/AddClass";
@@ -35,7 +34,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/instractors',
-                element: <Private><Instractor></Instractor></Private>
+                element:<Instractor></Instractor>
             },
             {
                 path: '/classes',

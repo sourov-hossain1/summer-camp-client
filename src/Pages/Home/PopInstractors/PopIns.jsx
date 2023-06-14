@@ -6,7 +6,7 @@ const PopIns = () => {
   const [instractors, setInstractors] = useState([]);
 
   useEffect(() => {
-    fetch('popIns.json')
+    fetch('http://localhost:5000/popins')
       .then(res => res.json())
       .then(data => {
         setInstractors(data)
