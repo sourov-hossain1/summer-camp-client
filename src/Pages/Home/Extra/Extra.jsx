@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import './Extra.css'
 import "swiper/css";
 import "swiper/css/pagination";
 const Extra = () => {
@@ -17,12 +18,12 @@ const Extra = () => {
                 modules={[Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide><img className="h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYolnhjBcmRpBET0VvG0hjSyaAN3KFt0qgWQ&usqp=CAU" alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8oxcEvdZ_JeQxkwPbA6JUWjq1M3ndDEZ_Q&usqp=CAU" alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYolnhjBcmRpBET0VvG0hjSyaAN3KFt0qgWQ&usqp=CAU" alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8oxcEvdZ_JeQxkwPbA6JUWjq1M3ndDEZ_Q&usqp=CAU" alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYolnhjBcmRpBET0VvG0hjSyaAN3KFt0qgWQ&usqp=CAU" alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8oxcEvdZ_JeQxkwPbA6JUWjq1M3ndDEZ_Q&usqp=CAU" alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-[200px] swiper-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYolnhjBcmRpBET0VvG0hjSyaAN3KFt0qgWQ&usqp=CAU" alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-[200px] swiper-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8oxcEvdZ_JeQxkwPbA6JUWjq1M3ndDEZ_Q&usqp=CAU" alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-[200px] swiper-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYolnhjBcmRpBET0VvG0hjSyaAN3KFt0qgWQ&usqp=CAU" alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-[200px] swiper-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8oxcEvdZ_JeQxkwPbA6JUWjq1M3ndDEZ_Q&usqp=CAU" alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-[200px] swiper-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYolnhjBcmRpBET0VvG0hjSyaAN3KFt0qgWQ&usqp=CAU" alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-[200px] swiper-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8oxcEvdZ_JeQxkwPbA6JUWjq1M3ndDEZ_Q&usqp=CAU" alt="" /></SwiperSlide>
             </Swiper> F
         </div>
     );

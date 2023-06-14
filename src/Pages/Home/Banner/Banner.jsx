@@ -1,11 +1,11 @@
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import './Banner.css'
+import './Banner.css'
 // import { Carousel } from 'react-responsive-carousel';
 
 const Banner = () => {
     return (
         <>
-            <div className="carousel w-full h-[420px]">
+            <div className="carousel w-full h-[420px] res-ban">
                 <div id="item1" className="carousel-item w-full">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3uLle4q3aS0CQBtEqchxqrHfDRu46ocCJZQ&usqp=CAU" className="w-full" />
                 </div>

@@ -4,3 +4,15 @@
     gap: 30px;
     margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 576px){
+    .popins-card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .single-card{
+        width: 313px;
+        height: 220px;
+        padding-left: 4px;
+    }
+}
