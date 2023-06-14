@@ -4,22 +4,14 @@ import { AuthContext } from '../Providers/AuthProviders';
 import useAxiosSecure from './useAxiosSecure';
 const useCart = () =>{
     const {user, loading} = useContext(AuthContext);
-    // const token = localStorage.getItem('access-token');
-    // console.log(user?.email)
     const [axiosSecure] = useAxiosSecure();
 
     const { refetch, data: cart = [] } = useQuery({
         queryKey: ['carts', user?.email],
         enabled: !loading,
-        // queryFn: async () =>{
-        //     const res = await fetch(`http://localhost:5000/carts?email=${user?.email}`, { headers: {
-        //         authorization: `bearer ${token}`
-        //     }})
-        //     return res.json();
-        // },
         queryFn: async () =>{
             const res = await axiosSecure(`/carts?email=${user?.email}`)
-            console.log('res from axios', res)
+            // console.log('res from axios', res)
             return res.data;
         },
       })
