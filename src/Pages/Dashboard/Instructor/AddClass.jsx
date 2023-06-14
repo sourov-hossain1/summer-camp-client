@@ -8,7 +8,7 @@ const AddClass = () => {
     const onSubmit = data => {
         // console.log(data);
 
-        fetch('http://localhost:5000/adds', {
+        fetch('https://summer-camp-server-sourov-hossain1.vercel.app/adds', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

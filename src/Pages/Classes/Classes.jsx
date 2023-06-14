@@ -13,7 +13,7 @@ const Classes = () => {
         // console.log(item);
         const { _id,name, image, instructor, seats, price} = item;
         const classItem = {classItemId: _id,name, instructor, image, price,seats, email: user.email}
-        fetch('http://localhost:5000/carts', {
+        fetch('https://summer-camp-server-sourov-hossain1.vercel.app/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,7 +29,7 @@ const Classes = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://summer-camp-server-sourov-hossain1.vercel.app/classes')
             .then(res => res.json())
             .then(data => {
                 setLearns(data)

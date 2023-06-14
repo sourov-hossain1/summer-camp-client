@@ -10,8 +10,8 @@ const useAdmin = () => {
     const { data: isAdmin } = useQuery({
         queryKey: ['isAdmin', user?.email],
         queryFn: async () => {
-            const res = await axiosSecure.get(`http://localhost:5000/users/admin/${user?.email}`)
-            // http://localhost:5000
+            const res = await axiosSecure.get(`https://summer-camp-server-sourov-hossain1.vercel.app/users/admin/${user?.email}`)
+            // https://summer-camp-server-sourov-hossain1.vercel.app
             console.log('is admin response', res)
             return res.data?.admin;
         }

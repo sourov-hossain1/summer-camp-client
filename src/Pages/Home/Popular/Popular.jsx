@@ -6,7 +6,7 @@ const Popular = () => {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/popular')
+    fetch('https://summer-camp-server-sourov-hossain1.vercel.app/popular')
       .then(res => res.json())
       .then(data => {
         const TopStudents = data.filter(number => number.students > 25);

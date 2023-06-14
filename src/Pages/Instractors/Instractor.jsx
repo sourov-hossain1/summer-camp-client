@@ -5,7 +5,7 @@ const Instractor = () => {
     const [instractors, setInstractors] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/instructor')
+    fetch('https://summer-camp-server-sourov-hossain1.vercel.app/instructor')
       .then(res => res.json())
       .then(data => {
         setInstractors(data)

@@ -8,7 +8,7 @@ const SelectClass = () => {
   const [cart, refetch] = useCart();
 
   // useEffect(() => {
-  //   fetch('http://localhost:5000/carts')
+  //   fetch('https://summer-camp-server-sourov-hossain1.vercel.app/carts')
   //     .then(res => res.json())
   //     .then(data => {
   //       setCarts(data)
@@ -26,7 +26,7 @@ const SelectClass = () => {
         confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/carts/${item._id}`, {
+            fetch(`https://summer-camp-server-sourov-hossain1.vercel.app/carts/${item._id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
