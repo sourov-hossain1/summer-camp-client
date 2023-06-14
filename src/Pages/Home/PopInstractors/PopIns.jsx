@@ -14,9 +14,17 @@ const PopIns = () => {
   }, [])
   return (
     <>
-      <h2 className="text-3xl text-center my-5">Popular Instractors</h2>
-      <p className="border-0 border-b-4 mb-5 w-1/4 mx-auto"></p>
-      <div className="popins-card">
+      <div className="hero h-[350px]" >
+        <div className="hero-overlay bg-opacity-60 bg-red-300"></div>
+        <div className="hero-content text-center text-neutral-content text-black">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Popular Instructor</h1>
+            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          </div>
+        </div>
+      </div>
+      {/* popular section */}
+      <div className="popins-card mt-3">
         {
           instractors.map(instractor => <div key={instractor._id} className="card card-side bg-base-100 shadow-xl">
             <figure><img className="h-[200px] w-[300px]" src={instractor.image} alt="Movie" /></figure>
