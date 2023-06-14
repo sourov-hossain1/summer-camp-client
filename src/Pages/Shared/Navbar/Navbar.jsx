@@ -2,13 +2,24 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
 
-const Navbar = () => {
-    const {logOut} = useContext(AuthContext);
 
-    const handleLogout = () =>{
+const Navbar = () => {
+    const { logOut } = useContext(AuthContext);
+
+    const handleLogout = () => {
         logOut()
-        .then(()=>{})
-        .catch(error => console.log(error))
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+    
+    const mystyle = {
+        color: "white",
+        backgroundColor: "dark",
+      };
+
+    function myFunction() {
+        const element = document.body;
+        element.classList.toggle(mystyle);
     }
 
 
@@ -17,6 +28,8 @@ const Navbar = () => {
         <li><Link to='/instractors' className="font-bold">Instructors</Link></li>
         <li><Link to='/classes' className="font-bold">Classes</Link></li>
         <li><Link to='/dashboard/selectclass' className="font-bold">Dashboard</Link></li>
+        <li><button className="font-bold" onClick={myFunction}>Dark mode</button>
+        </li>
     </>
 
     return (
